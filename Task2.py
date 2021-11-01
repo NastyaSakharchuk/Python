@@ -21,10 +21,9 @@ print("наибольший нечетный элемент: ", max_element)
 
 min_element = None
 for x in array:
-    if  min_element is None or abs(x) < min_element:
+    if min_element is None or abs(x) < min_element:
         min_element = abs(x)
 print("минимальный по модулю элемент списка: ", min_element)
-
 
 """"
 Задание 2. Задачи на многомерные списки 
@@ -46,3 +45,19 @@ for i in range(len(A)):
         sum_str = 0
 
 print("номер строки, сумма чисел в которой максимальна: ", col + 1)
+
+"""""
+2.	Симметричная матрица. 
+Дана квадратная матрица. Проверить, является ли она симметричной относительно главной диагонали.
+"""""
+matrix = [[1, 1, 1], [1, 1, 1], [1, 1, 1]]
+is_symmetric = True
+for i in range(len(matrix)):
+    for j in range(i + 1, len(matrix)):
+        if matrix[i][j] != matrix[j][i]:
+            is_symmetric = False
+            break
+    else:
+        continue
+    break
+print(is_symmetric)
