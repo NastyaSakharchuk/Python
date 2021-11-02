@@ -20,6 +20,25 @@ min_abs = min(array2)
 print(f"минимальный по модулю элемент {min_abs}")
 
 '''
+Задание 2. Задачи на многомерные списки 
+1. В матрице найти номер строки, сумма чисел в которой максимальна. 
+'''
+matrix = [[4, 0], [20, 0], [2, 0], [1, 0]]
+
+
+def find_max_row(matrix):
+    max_sum = sum(matrix[0])
+    max_index = 0
+    for i, row in enumerate(matrix):
+        row_sum = sum(row)
+        if row_sum > max_sum:
+            max_sum, max_index = row_sum, i
+    return max_index
+
+
+print("номер строки, сумма чисел в которой максимальна: ", find_max_row(matrix) + 1)
+
+'''
 2. Симметричная матрица. 
 Дана квадратная матрица. Проверить, является ли она симметричной относительно главной диагонали.
 '''
