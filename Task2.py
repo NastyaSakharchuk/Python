@@ -30,21 +30,20 @@ print("минимальный по модулю элемент списка: ", 
 1. В матрице найти номер строки, сумма чисел в которой максимальна. 
 """""
 
-A = [[5, 10, 20], [110, 15, 20], [7, 3, 1]]
-print(A)
-max_sum = 0
-sum_str = 0
-col = 0
-for i in range(len(A)):
-    for j in range(len(A)):
-        sum_str += A[i][j]
-    print(sum_str)
-    if sum_str > max_sum:
-        max_sum = sum_str
-        col = i
-        sum_str = 0
-
-print("номер строки, сумма чисел в которой максимальна: ", col + 1)
+a = [[4, 0], [2, 0], [2, 0], [1, 0]]
+print(a)
+max_sum = None
+row_sum = 0
+row_index = 0
+for i in range(len(a)):
+    for j in range(len(a[i])):
+        row_sum += a[i][j]
+    print(row_sum)
+    if max_sum is None or row_sum > max_sum:
+        max_sum = row_sum
+        row_index = i
+    row_sum = 0
+print("номер строки, сумма чисел в которой максимальна: ", row_index + 1)
 
 """""
 2.	Симметричная матрица. 
